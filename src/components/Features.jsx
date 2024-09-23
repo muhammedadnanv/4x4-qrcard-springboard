@@ -1,5 +1,5 @@
 import React from 'react';
-import { Smartphone, Link, Refresh, Shield } from 'lucide-react';
+import { Smartphone, Link, RefreshCcw, Shield } from 'lucide-react';
 
 const FeatureItem = ({ icon, title, description }) => (
   <div className="flex flex-col items-center text-center">
@@ -26,7 +26,7 @@ const Features = () => {
             description="Update your info anytime without reprinting cards."
           />
           <FeatureItem 
-            icon={<Refresh className="h-12 w-12 text-blue-600" />}
+            icon={<RefreshCcw className="h-12 w-12 text-blue-600" />}
             title="Eco-Friendly"
             description="Reduce paper waste with our sustainable solution."
           />
