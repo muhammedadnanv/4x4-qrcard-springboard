@@ -4,6 +4,7 @@ import Hero from '../components/Hero';
 import Features from '../components/Features';
 import ColorThemes from '../components/ColorThemes';
 import Pricing from '../components/Pricing';
+import BookNow from '../components/BookNow';
 import CallToAction from '../components/CallToAction';
 import Footer from '../components/Footer';
 
@@ -15,6 +16,7 @@ const Index = () => {
       <Features />
       <ColorThemes />
       <Pricing />
+      <BookNow />
       <CallToAction />
       <Footer />
     </div>

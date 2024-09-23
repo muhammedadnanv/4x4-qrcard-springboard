@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 const PricingTier = ({ name, price, features }) => (
   <div className="bg-white p-6 rounded-lg shadow-md flex flex-col">
     <h3 className="text-2xl font-bold mb-4">{name}</h3>
-    <p className="text-4xl font-bold mb-6">${price}</p>
+    <p className="text-4xl font-bold mb-6">₹{price.toLocaleString('en-IN')}</p>
     <ul className="mb-6 flex-grow">
       {features.map((feature, index) => (
         <li key={index} className="flex items-center mb-2">
