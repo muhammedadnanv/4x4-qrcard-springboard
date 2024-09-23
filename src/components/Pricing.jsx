@@ -1,22 +1,30 @@
 import React from 'react';
 import { Check } from 'lucide-react';
 import { Button } from "@/components/ui/button";
+import { Link } from 'react-router-dom';
 
-const PricingTier = ({ quantity, totalPrice, features }) => (
-  <div className="bg-white p-6 rounded-lg shadow-md flex flex-col">
-    <h3 className="text-2xl font-bold mb-4">{quantity} QR Cards</h3>
-    <p className="text-4xl font-bold mb-6">₹{totalPrice.toLocaleString('en-IN')}</p>
-    <ul className="mb-6 flex-grow">
-      {features.map((feature, index) => (
-        <li key={index} className="flex items-center mb-2">
-          <Check className="h-5 w-5 text-green-500 mr-2" />
-          <span>{feature}</span>
-        </li>
-      ))}
-    </ul>
-    <Button className="w-full">Order Now</Button>
-  </div>
-);
+const PricingTier = ({ quantity, totalPrice, features }) => {
+  const handleOrderNow = () => {
+    const upiLink = `upi://pay?pa=adnanmuhammad4393@okicici&pn=4x4QRCards&am=${totalPrice}&cu=INR&tn=Order${quantity}QRCards`;
+    window.open(upiLink, '_blank');
+  };
+
+  return (
+    <div className="bg-white p-6 rounded-lg shadow-md flex flex-col">
+      <h3 className="text-2xl font-bold mb-4">{quantity} QR Cards</h3>
+      <p className="text-4xl font-bold mb-6">₹{totalPrice.toLocaleString('en-IN')}</p>
+      <ul className="mb-6 flex-grow">
+        {features.map((feature, index) => (
+          <li key={index} className="flex items-center mb-2">
+            <Check className="h-5 w-5 text-green-500 mr-2" />
+            <span>{feature}</span>
+          </li>
+        ))}
+      </ul>
+      <Button className="w-full" onClick={handleOrderNow}>Order Now</Button>
+    </div>
+  );
+};
 
 const Pricing = () => {
   const tiers = [
