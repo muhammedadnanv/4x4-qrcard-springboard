@@ -9,6 +9,7 @@ const Footer = () => {
           <div className="w-full md:w-1/3 mb-6 md:mb-0">
             <h3 className="text-xl font-bold mb-2">4x4 QRCards</h3>
             <p className="text-gray-400">Revolutionizing business networking</p>
+            <p className="text-gray-400 mt-2">A product of Ad Web Comic Agency</p>
           </div>
           <div className="w-full md:w-1/3 mb-6 md:mb-0">
             <h4 className="text-lg font-semibold mb-2">Quick Links</h4>
@@ -29,7 +30,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-8 text-center text-gray-400">
-          <p>&copy; 2023 4x4 QRCards. All rights reserved.</p>
+          <p>&copy; 2023 4x4 QRCards. All rights reserved. A product of Ad Web Comic Agency.</p>
         </div>
       </div>
     </footer>

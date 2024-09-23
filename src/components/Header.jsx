@@ -13,7 +13,10 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <div className="flex items-center space-x-2">
           <QrCode className="h-8 w-8 text-blue-600" />
-          <span className="text-xl font-bold text-gray-800">4x4 QRCards</span>
+          <div>
+            <span className="text-xl font-bold text-gray-800">4x4 QRCards</span>
+            <p className="text-xs text-gray-600">by Ad Web Comic Agency</p>
+          </div>
         </div>
         <nav>
           <ul className="flex space-x-4">
