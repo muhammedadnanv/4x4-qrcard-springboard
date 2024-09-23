@@ -2,10 +2,12 @@ import React from 'react';
 import { Check } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
-const PricingTier = ({ name, price, features }) => (
+const PricingTier = ({ quantity, pricePerCard, totalPrice, discount, originalPrice, features }) => (
   <div className="bg-white p-6 rounded-lg shadow-md flex flex-col">
-    <h3 className="text-2xl font-bold mb-4">{name}</h3>
-    <p className="text-4xl font-bold mb-6">₹{price.toLocaleString('en-IN')}</p>
+    <h3 className="text-2xl font-bold mb-4">{quantity} Business Cards</h3>
+    <p className="text-lg mb-2">₹{pricePerCard.toFixed(2)} each</p>
+    <p className="text-4xl font-bold mb-2">₹{totalPrice.toLocaleString('en-IN')}</p>
+    <p className="text-green-600 mb-6">{discount}% off (₹{originalPrice.toLocaleString('en-IN')})</p>
     <ul className="mb-6 flex-grow">
       {features.map((feature, index) => (
         <li key={index} className="flex items-center mb-2">
@@ -14,36 +16,45 @@ const PricingTier = ({ name, price, features }) => (
         </li>
       ))}
     </ul>
-    <Button className="w-full">Choose {name}</Button>
+    <Button className="w-full">Order Now</Button>
   </div>
 );
 
 const Pricing = () => {
   const tiers = [
     {
-      name: "Basic",
-      price: 1000,
+      quantity: 1000,
+      pricePerCard: 3.50,
+      totalPrice: 3500,
+      discount: 65,
+      originalPrice: 19980,
       features: [
-        "100 QR Cards",
+        "High-quality QR Cards",
         "Basic customization",
         "Standard support"
       ]
     },
     {
-      name: "Pro",
-      price: 1400,
+      quantity: 1500,
+      pricePerCard: 2.99,
+      totalPrice: 4485,
+      discount: 70,
+      originalPrice: 14970,
       features: [
-        "250 QR Cards",
+        "Premium QR Cards",
         "Advanced customization",
         "Priority support",
         "Analytics dashboard"
       ]
     },
     {
-      name: "Enterprise",
-      price: 2000,
+      quantity: 2000,
+      pricePerCard: 2.99,
+      totalPrice: 5980,
+      discount: 70,
+      originalPrice: 19960,
       features: [
-        "500 QR Cards",
+        "Deluxe QR Cards",
         "Full customization",
         "24/7 support",
         "Advanced analytics",
