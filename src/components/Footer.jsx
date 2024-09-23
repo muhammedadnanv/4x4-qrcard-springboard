@@ -22,10 +22,9 @@ const Footer = () => {
           <div className="w-full md:w-1/3">
             <h4 className="text-lg font-semibold mb-2">Connect With Us</h4>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white"><Facebook /></a>
-              <a href="#" className="text-gray-400 hover:text-white"><Twitter /></a>
-              <a href="#" className="text-gray-400 hover:text-white"><Instagram /></a>
-              <a href="#" className="text-gray-400 hover:text-white"><Linkedin /></a>
+             
+              <a href="https://www.instagram.com/_adwebcomicagency._/" className="text-gray-400 hover:text-white"><Instagram /></a>
+              <a href="https://www.linkedin.com/company/ad-web-comic-agency/" className="text-gray-400 hover:text-white"><Linkedin /></a>
             </div>
           </div>
         </div>
